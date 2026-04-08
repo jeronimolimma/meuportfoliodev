@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="favicon-cantor.svg">
+    <title>Jerônimo Lima | Cantor & Músico</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        :root { 
+            --bg-color: #000000;      /* Fundo Preto para foco no palco */
+            --bg-secondary: #121212;
+            --accent-color: #f59e0b;   /* Amarelo/Ouro para o artista */ 
+            --accent-glow: rgba(245, 158, 11, 0.3);
+            --text-primary: #ffffff;
+            --text-secondary: #a1a1aa;
+        }
+        .project-card .card-img { height: 250px; }
+        .navbar { background: rgba(0, 0, 0, 0.9); border-bottom: 1px solid #27272a; }
+        .section-title::after { background: var(--accent-color); }
+        .btn-primary { background: var(--accent-color); color: #000 !important; }
+        .btn-outline { border-color: var(--accent-color); color: var(--accent-color); }
+        .btn-outline:hover { background: var(--accent-color); color: #000; }
+        .project-card { border-color: #27272a; }
+        .project-card:hover { border-color: var(--accent-color); }
+        .skill-per { background: linear-gradient(90deg, var(--accent-color) 0%, #fff 200%); }
+        footer { background: #09090b; }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo"><a href="index.html">Jerônimo<span>Lima</span></a></div>
+        <ul class="nav-links">
+            <li><a href="index.html" class="highlight-text"><i class="fas fa-arrow-left"></i> Voltar</a></li>
+            <li><a href="#media">Mídia</a></li>
+            <li><a href="#agenda">Agenda</a></li>
+            <li><a href="#contact" class="btn-contact">Contratar Show</a></li>
+        </ul>
+        <div class="menu-toggle"><i class="fas fa-bars"></i></div>
+    </nav>
+
+    <header id="home" class="hero" style="background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1516280440614-37939bbacd81?auto=format&fit=crop&q=80'); background-size: cover;">
+        <div class="hero-content">
+            <p class="greeting" style="color: var(--accent-color);">Voz e Performance</p>
+            <h1 style="font-size: 5rem;">Música ao Vivo</h1>
+            <h2 class="typewriter-text">Especialista em <span id="typing">Eventos e Casamentos</span></h2>
+            <div class="hero-btns">
+                <a href="#media" class="btn btn-primary">Ouvir Agora</a>
+                <a href="https://wa.me/5511983110348?text=Olá%20Jerônimo,%20gostaria%20de%20consultar%20sua%20agenda%20musical." class="btn btn-outline">Orçamento WhatsApp</a>
+            </div>
+        </div>
+    </header>
+
+    <section id="media" class="section">
+        <div class="container">
+            <h2 class="section-title">Galeria & Vídeos</h2>
+            <div class="projects-grid">
+                <!-- Aqui você pode colocar links de vídeos do Youtube ou fotos de shows -->
+                <article class="project-card">
+                    <div style="padding: 56.25% 0 0 0; position: relative;">
+                        <iframe src="https://www.youtube.com/embed/EXEMPLO" style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;" allowfullscreen></iframe>
+                    </div>
+                    <div class="card-content">
+                        <h3>Show Acústico - 2023</h3>
+                        <p>Performance ao vivo de clássicos da MPB e Pop Internacional.</p>
+                    </div>
+                </article>
+                <article class="project-card">
+                    <img src="foto-evento.jpg" alt="Show em Casamento" class="card-img">
+                    <div class="card-content">
+                        <h3>Eventos Sociais</h3>
+                        <p>Formatos personalizados para casamentos e recepções.</p>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section id="agenda" class="section" style="background: var(--bg-secondary);">
+        <div class="container">
+            <h2 class="section-title">Agenda</h2>
+            <div class="text">
+                <ul style="list-style: none; font-size: 1.2rem;">
+                    <li style="margin-bottom: 15px; border-bottom: 1px solid #334155; padding-bottom: 10px;">
+                        <strong>20 MAI</strong> - Bar do Porto, Salvador/BA - 21:00
+                    </li>
+                    <li style="margin-bottom: 15px; border-bottom: 1px solid #334155; padding-bottom: 10px;">
+                        <strong>12 JUN</strong> - Especial Dia dos Namorados (Privado)
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section">
+        <div class="container center-text">
+            <p class="highlight-text">Disponível para todo o Brasil</p>
+            <h2 class="section-title">Leve Música para seu Evento</h2>
+            <form id="contactForm" class="contact-form" action="https://formsubmit.co/jeronimo.lima_@outlook.com" method="POST">
+                <input type="text" id="name" name="name" placeholder="Seu Nome" required>
+                <input type="email" id="email" name="email" placeholder="Seu E-mail" required>
+                <input type="text" name="event_type" placeholder="Tipo de Evento (Casamento, Corporativo...)" required>
+                <input type="text" name="date" placeholder="Data pretendida" required>
+                <select id="reason" name="reason" required style="display: none;">
+                    <option value="show" selected>Contratação de Show</option>
+                </select>
+                <input type="hidden" name="_subject" value="Contato Portfólio Cantor - Jerônimo Lima">
+                <input type="hidden" name="_autorespond" value="Olá! Fiquei muito feliz com seu interesse em meu trabalho musical. Recebi seu pedido de orçamento e entrarei em contato em breve para combinarmos os detalhes do seu evento! Musicalmente, Jerônimo Lima.">
+
+                <textarea name="message" placeholder="Diga-nos um pouco sobre o que você imagina para o evento..." rows="4" required></textarea>
+                <button type="submit" id="submitBtn" class="btn btn-primary big-btn" style="background: var(--accent-color);" disabled>Solicitar Disponibilidade</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-col">
+                <h3>Jerônimo<span>Lima</span></h3>
+                <p>Levando música e emoção para os momentos mais especiais da sua vida. Shows e eventos personalizados.</p>
+                <div class="social-links-footer">
+                    <a href="https://www.youtube.com/@jeronimolima" target="_blank"><i class="fab fa-youtube"></i></a>
+                    <a href="https://www.instagram.com/jeronimolima/" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://open.spotify.com/user/jeronimolima" target="_blank"><i class="fab fa-spotify"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h3>Navegação</h3>
+                <ul>
+                    <li><a href="#home">Início</a></li>
+                    <li><a href="#media">Mídia</a></li>
+                    <li><a href="#agenda">Agenda</a></li>
+                    <li><a href="index.html">Perfis Profissionais</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Shows</h3>
+                <p><i class="fas fa-envelope"></i> jeronimo.lima_@outlook.com</p>
+                <p><i class="fas fa-music"></i> Voz e Performance</p>
+                <p><i class="fas fa-phone"></i> +55 (11) 98311-0348</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; <span id="year">2026</span> Jerônimo Lima. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Botão Flutuante WhatsApp -->
+    <a href="https://wa.me/5511983110348?text=Olá%20Jerônimo,%20gostaria%20de%20consultar%20sua%20agenda%20musical." class="btn-whatsapp" target="_blank" title="Falar pelo WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Botão Voltar Fixo para Mobile -->
+    <a href="index.html" class="btn-back-floating" title="Voltar ao Menu"><i class="fas fa-arrow-left"></i></a>
+
+    <script src="script.js"></script>
+</body>
+</html>

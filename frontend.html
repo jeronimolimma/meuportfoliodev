@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="favicon-frontend.svg">
+    <title>Jerônimo Lima | Front-end Developer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        :root {
+            /* Tons de roxo neon e fundo ultra escuro */
+            --bg-color: #020617;      /* Slate 950 - Fundo mais profundo */
+            --bg-secondary: #0f172a;  /* Slate 900 */
+            --accent-color: #a855f7;  /* Roxo Neon (Purple 500) */
+            --accent-glow: rgba(168, 85, 247, 0.5);
+            --text-primary: #f8fafc;
+        }
+
+        /* Efeito de brilho neon para elementos principais */
+        .hero-content h1 { 
+            text-shadow: 0 0 20px var(--accent-glow);
+        }
+
+        .btn-primary {
+            box-shadow: 0 0 15px var(--accent-glow);
+            border: 1px solid rgba(168, 85, 247, 0.3);
+        }
+
+        .project-card:hover {
+            box-shadow: 0 0 25px var(--accent-glow);
+            border-color: var(--accent-color);
+        }
+
+        /* Ajuste na transparência da navbar para o tema dark */
+        .navbar { background: rgba(2, 6, 23, 0.95); }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo"><a href="index.html">Jerônimo<span>.dev</span></a></div>
+        <ul class="nav-links">
+            <li><a href="index.html" class="highlight-text"><i class="fas fa-arrow-left"></i> Voltar</a></li>
+            <li><a href="#about">Sobre</a></li>
+            <li><a href="#projects">Projetos</a></li>
+            <li><a href="#contact" class="btn-contact">Contato</a></li>
+        </ul>
+        <div class="menu-toggle"><i class="fas fa-bars"></i></div>
+    </nav>
+
+    <header id="home" class="hero" style="background: linear-gradient(rgba(2, 6, 23, 0.9), rgba(2, 6, 23, 0.8)), url('https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80'); background-size: cover; background-attachment: fixed;">
+        <div class="hero-content">
+            <p class="greeting">Olá, eu sou o Jerônimo</p>
+            <h1>Front-end Developer</h1>
+            <h2 class="typewriter-text">Transformando café em <span id="typing">código moderno</span></h2>
+            <div class="hero-btns">
+                <a href="#projects" class="btn btn-primary">Ver Projetos</a>
+                <a href="#contact" class="btn btn-outline">Vamos Conversar</a>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <a href="#about"><i class="fas fa-chevron-down"></i></a>
+        </div>
+    </header>
+
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title">Minha Stack</h2>
+            <div class="about-content">
+                <div class="text">
+                    <p>Especializado em criar interfaces de usuário intuitivas, responsivas e de alta performance. Meu foco é escrever código limpo e escalável, utilizando as melhores práticas do mercado.</p>
+                    <br>
+                    <p>Atualmente focado no ecossistema JavaScript e em ferramentas de design UI/UX para entregar a melhor experiência possível ao usuário final.</p>
+                </div>
+                <div class="skills-container">
+                    <div class="skill-box">
+                        <div class="skill-title"><span><i class="fab fa-html5"></i> HTML5 / CSS3</span><span>90%</span></div>
+                        <div class="skill-bar"><div class="skill-per html" style="width: 90%;"></div></div>
+                    </div>
+                    <div class="skill-box">
+                        <div class="skill-title"><span><i class="fab fa-js"></i> JavaScript (ES6+)</span><span>75%</span></div>
+                        <div class="skill-bar"><div class="skill-per js" style="width: 75%;"></div></div>
+                    </div>
+                    <div class="skill-box">
+                        <div class="skill-title"><span><i class="fab fa-react"></i> React.js / Vite</span><span>65%</span></div>
+                        <div class="skill-bar"><div class="skill-per" style="width: 65%; background: var(--accent-color);"></div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="section" style="background: var(--bg-secondary);">
+        <div class="container">
+            <h2 class="section-title">Projetos em Destaque</h2>
+            <div class="projects-grid">
+                <!-- Projeto 1 -->
+                <article class="project-card">
+                    <img src="https://images.unsplash.com/photo-1571019625454-f45025740c0e?auto=format&fit=crop&q=80" alt="Projeto de Academia" class="card-img lazy-img" loading="lazy" decoding="async">
+                    <div class="card-content">
+                        <div class="card-header">
+                            <i class="fas fa-dumbbell"></i>
+                            <div class="links">
+                                <a href="https://github.com/jeronimolima" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                                <a href="https://github.com/jeronimolima" target="_blank" title="Link Direto"><i class="fas fa-external-link-alt"></i></a>
+                            </div>
+                        </div>
+                        <h3>Projeto de Academia</h3>
+                        <p>Website completo para academia com informações de aulas, horários, planos e área de login para alunos.</p>
+                        <ul class="tech-list">
+                            <li>HTML5</li>
+                            <li>CSS3</li>
+                            <li>JavaScript</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <!-- Projeto 2 -->
+                <article class="project-card">
+                    <img src="https://images.unsplash.com/photo-1621607508756-b17fe5057579?auto=format&fit=crop&q=80" alt="Barbearia com Agendamento" class="card-img lazy-img" loading="lazy" decoding="async">
+                    <div class="card-content">
+                        <div class="card-header">
+                            <i class="fas fa-cut"></i>
+                            <div class="links">
+                                <a href="https://github.com/jeronimolima" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                                <a href="https://github.com/jeronimolima" target="_blank" title="Link Direto"><i class="fas fa-external-link-alt"></i></a>
+                            </div>
+                        </div>
+                        <h3>Barbearia com Agendamento</h3>
+                        <p>Sistema de agendamento online para barbearia, permitindo clientes escolherem serviços, horários e profissionais.</p>
+                        <ul class="tech-list">
+                            <li>React</li>
+                            <li>Node.js</li>
+                            <li>MongoDB</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <!-- Projeto 3 -->
+                <article class="project-card">
+                    <img src="https://images.unsplash.com/photo-1556740738-b6a63e27c4df?auto=format&fit=crop&q=80" alt="Mini CRM de Vendas" class="card-img lazy-img" loading="lazy" decoding="async">
+                    <div class="card-content">
+                        <div class="card-header">
+                            <i class="fas fa-handshake"></i>
+                            <div class="links">
+                                <a href="https://github.com/jeronimolima" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                                <a href="https://github.com/jeronimolima" target="_blank" title="Link Direto"><i class="fas fa-external-link-alt"></i></a>
+                            </div>
+                        </div>
+                        <h3>Mini CRM de Vendas</h3>
+                        <p>Sistema de gerenciamento de clientes e vendas, com dashboard intuitivo para acompanhamento de funil e métricas.</p>
+                        <ul class="tech-list">
+                            <li>Vue.js</li>
+                            <li>Firebase</li>
+                            <li>Tailwind CSS</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <!-- Projeto 4 (Novo) -->
+                <article class="project-card">
+                    <img src="https://images.unsplash.com/photo-1593642632823-8f785ba67e45?auto=format&fit=crop&q=80" alt="Loja de Tecnologia" class="card-img lazy-img" loading="lazy" decoding="async">
+                    <div class="card-content">
+                        <div class="card-header">
+                            <i class="fas fa-laptop-code"></i>
+                            <div class="links">
+                                <a href="https://github.com/jeronimolima" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                                <a href="https://github.com/jeronimolima" target="_blank" title="Link Direto"><i class="fas fa-external-link-alt"></i></a>
+                            </div>
+                        </div>
+                        <h3>Loja de Tecnologia</h3>
+                        <p>E-commerce responsivo para venda de produtos eletrônicos, com carrinho de compras, filtros e sistema de pagamento integrado.</p>
+                        <ul class="tech-list">
+                            <li>Next.js</li>
+                            <li>Stripe API</li>
+                            <li>TypeScript</li>
+                        </ul>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section">
+        <div class="container center-text">
+            <p class="highlight-text">Trabalhe comigo</p>
+            <h2 class="section-title">Inicie um Projeto</h2>
+            <form id="contactForm" class="contact-form" action="https://formsubmit.co/jeronimo.lima_@outlook.com" method="POST">
+                <input type="text" id="name" name="name" placeholder="Seu Nome" required>
+                <input type="email" id="email" name="email" placeholder="Seu E-mail" required>
+                <select id="reason" name="reason" required>
+                    <option value="" disabled selected>Assunto</option>
+                    <option value="freelance">Projeto Freelance</option>
+                    <option value="hiring">Oportunidade de Emprego</option>
+                    <option value="other">Outros</option>
+                </select>
+                <input type="hidden" name="_subject" value="Contato Portfólio Front-end - Jerônimo Lima">
+                <input type="hidden" name="_autorespond" value="Olá! Recebi sua mensagem sobre projetos de Desenvolvimento Front-end. Analisarei os detalhes e entrarei em contato com você o mais breve possível. Atenciosamente, Jerônimo Lima.">
+
+                <textarea name="message" placeholder="Sua mensagem..." rows="5" required></textarea>
+                <button type="submit" id="submitBtn" class="btn btn-primary big-btn" disabled>Enviar Proposta</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-col">
+                <h3>Jerônimo<span>.dev</span></h3>
+                <p>Desenvolvedor focado em criar soluções digitais de alto impacto com tecnologias modernas.</p>
+                <div class="social-links-footer">
+                    <a href="https://github.com/jeronimolima" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/jeronimolima/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://www.instagram.com/jeronimolima/" target="_blank"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h3>Navegação</h3>
+                <ul>
+                    <li><a href="#home">Início</a></li>
+                    <li><a href="#about">Sobre</a></li>
+                    <li><a href="#projects">Projetos</a></li>
+                    <li><a href="index.html">Mudar Perfil</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Contato</h3>
+                <p><i class="fas fa-envelope"></i> jeronimo.lima_@outlook.com</p>
+                <p><i class="fas fa-map-marker-alt"></i> São Paulo, SP</p>
+                <p><i class="fas fa-phone"></i> +55 (11) 98311-0348</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; <span id="year">2026</span> Jerônimo Lima. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Botão Flutuante WhatsApp -->
+    <a href="https://wa.me/5511983110348?text=Olá%20Jerônimo,%20tenho%20interesse%20em%20um%20projeto%20de%20Desenvolvimento%20Front-end." class="btn-whatsapp" target="_blank" title="Falar pelo WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Botão Voltar Fixo para Mobile -->
+    <a href="index.html" class="btn-back-floating" title="Voltar ao Menu"><i class="fas fa-arrow-left"></i></a>
+
+    <script src="script.js"></script>
+</body>
+</html>

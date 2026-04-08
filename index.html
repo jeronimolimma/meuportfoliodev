@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <title>Jerônimo Lima | Selecione um Perfil</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .hub-body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background: radial-gradient(circle at center, #1e293b 0%, #0f172a 100%);
+            padding: 20px;
+        }
+        .hub-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        .hub-title h1 { font-size: 3rem; margin-bottom: 10px; font-family: var(--font-heading); }
+        .hub-title p { color: var(--accent-color); font-weight: 500; letter-spacing: 2px; }
+        
+        .hub-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            max-width: 850px;
+            width: 100%;
+        }
+
+        /* Estilização específica para os cards do Hub */
+        .hub-card {
+            position: relative;
+            text-align: center;
+            padding: 60px 30px;
+            overflow: hidden;
+            border: 1px solid rgba(56, 189, 248, 0.2);
+            background-size: cover;
+            background-position: center;
+            z-index: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: 320px; /* Altura fixa para garantir que todos os cards sejam iguais */
+        }
+
+        /* Overlay escuro para garantir legibilidade */
+        .hub-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(180deg, rgba(15, 23, 42, 0.6) 0%, rgba(15, 23, 42, 0.9) 100%);
+            z-index: -1;
+            transition: var(--transition);
+        }
+
+        .hub-card:hover::before {
+            background: linear-gradient(180deg, rgba(15, 23, 42, 0.4) 0%, rgba(15, 23, 42, 0.8) 100%);
+        }
+
+        .hub-card:hover { transform: translateY(-10px) scale(1.02); }
+
+        /* Estilo para os vídeos de fundo */
+        .hub-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -2; /* Atrás do overlay (::before) e do conteúdo */
+        }
+
+        /* Fallback de imagem via CSS (Caso o vídeo não seja suportado) */
+        .card-frontend { background-image: url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&q=80'); }
+        .card-logistica { background-image: url('https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&q=80'); }
+        .card-cantor { background-image: url('https://images.unsplash.com/photo-1516280440614-37939bbacd81?auto=format&fit=crop&q=80'); }
+
+        .hub-card h3 { font-size: 1.5rem; margin-top: 15px; color: #fff; text-shadow: 0 2px 4px rgba(0,0,0,0.5); }
+        .hub-card p { color: #e2e8f0; font-size: 0.95rem; }
+        .hub-card .card-header { color: var(--accent-color); font-size: 3rem; margin-bottom: 10px; }
+
+        /* Estilização Refinada do Rodapé do Hub */
+        .hub-footer {
+            margin-top: auto; /* Garante que o rodapé fique no fundo se houver espaço */
+            width: 100%;
+            max-width: 800px;
+            text-align: center;
+            padding: 40px 20px 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+            transition: var(--transition);
+            opacity: 0.8;
+        }
+
+        .hub-footer p {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            flex-wrap: wrap;
+            margin-top: 15px;
+        }
+
+        .hub-footer strong {
+            color: var(--text-primary);
+            font-weight: 600;
+            transition: var(--transition);
+        }
+
+        .hub-footer:hover { opacity: 1; }
+        .hub-footer:hover strong {
+            color: var(--accent-color);
+            text-shadow: 0 0 10px var(--accent-glow);
+        }
+
+        @media (max-width: 900px) { 
+            .hub-grid { 
+                grid-template-columns: 1fr;
+                max-width: 450px; /* Limita a largura no mobile para os cards ficarem centralizados e elegantes */
+            } 
+        }
+    </style>
+</head>
+<body class="hub-body">
+    <div class="hub-title">
+        <h1>Jerônimo Lima</h1>
+        <p>SELECIONE UM PERFIL</p>
+    </div>
+
+    <div class="hub-grid">
+        <a href="frontend.html" class="project-card hub-card card-frontend">
+            <video class="hub-video" autoplay muted loop playsinline poster="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&q=80">
+                <source src="caminho/seu-video-dev.mp4" type="video/mp4">
+            </video>
+            <div class="card-header"><i class="fas fa-code"></i></div>
+            <h3>Desenvolvedor Front-end</h3>
+            <p>Interfaces modernas, responsivas e focadas na experiência do usuário.</p>
+        </a>
+
+        <a href="logistica.html" class="project-card hub-card card-logistica">
+            <video class="hub-video" autoplay muted loop playsinline poster="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&q=80">
+                <source src="caminho/seu-video-log.mp4" type="video/mp4">
+            </video>
+            <div class="card-header"><i class="fas fa-truck-loading"></i></div>
+            <h3>Logística & Supply Chain</h3>
+            <p>Especialista em processos operacionais, gestão de estoque e eficiência logística.</p>
+        </a>
+    </div>
+
+    <footer class="hub-footer">
+        <div class="social-links-footer" style="justify-content: center;">
+            <a href="https://www.linkedin.com/in/jeronimolima/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/jeronimolima" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://www.instagram.com/jeronimolima/" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://wa.me/5511983110348?text=Olá%20Jerônimo,%20vi%20seu%20site%20e%20gostaria%20de%20conversar." target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        </div>
+        <p>Desenvolvido com excelência por <strong>Jerônimo Lima</strong> <i class="fas fa-check-circle verified-badge"></i> &copy; <span id="year">2026</span></p>
+    </footer>
+
+    <!-- Botão Flutuante WhatsApp -->
+    <a href="https://wa.me/5511983110348?text=Olá%20Jerônimo,%20vi%20seu%20site%20e%20gostaria%20de%20conversar." class="btn-whatsapp" target="_blank" title="Falar pelo WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+</body>
+</html>
